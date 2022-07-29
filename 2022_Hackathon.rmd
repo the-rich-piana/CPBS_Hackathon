@@ -1,0 +1,46 @@
+---
+title: "CoSIBS Hackathon"
+author: "Someone"
+date: '2022-07-27'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+```
+
+
+```{r}
+#put all the files into a folder and update the location
+data_folder = "C:/Users/rogersdu/Downloads/"
+
+
+#import all the csv into dataframes, dropping 'X' column since it is a row number col
+daily_df = read.csv(paste0(data_folder, "daily_data.csv")) %>% select(-X)
+intake_df = read.csv(paste0(data_folder, "intake_data.csv")) %>% select(-X)
+culture_df = read.csv(paste0(data_folder, "culture_data.csv")) %>% select(-X)
+antib_df = read.csv(paste0(data_folder, "antibiotics.csv")) %>% select(-X)
+
+#join all the dataframes together on SubjectID for a mega dataframe 'o' 
+all_data = full_join(daily_df, intake_df, by =  "SubjectID") %>%
+  full_join(., culture_df, by = "SubjectID") %>%
+  full_join(., antib_df, by = "SubjectID")
+
+```
+
+
+```{r}
+#Do stuff
+```
+
+
+```{r}
+#Do more stuff
+```
+
+
+```{r}
+#You get the point.\
+```

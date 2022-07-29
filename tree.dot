@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Production Cost <= 0.052\nsquared_error = 0.997\nsamples = 1533\nvalue = 4.581"] ;
+1 [label="Production Cost <= 0.015\nsquared_error = 0.98\nsamples = 164\nvalue = 5.256"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Production Cost <= 0.006\nsquared_error = 0.88\nsamples = 76\nvalue = 5.558"] ;
+1 -> 2 ;
+3 [label="squared_error = 0.551\nsamples = 16\nvalue = 5.829"] ;
+2 -> 3 ;
+4 [label="squared_error = 0.943\nsamples = 60\nvalue = 5.486"] ;
+2 -> 4 ;
+5 [label="Production Cost <= 0.05\nsquared_error = 0.92\nsamples = 88\nvalue = 4.996"] ;
+1 -> 5 ;
+6 [label="squared_error = 0.885\nsamples = 86\nvalue = 4.961"] ;
+5 -> 6 ;
+7 [label="squared_error = 0.076\nsamples = 2\nvalue = 6.511"] ;
+5 -> 7 ;
+8 [label="Production Cost <= 0.388\nsquared_error = 0.937\nsamples = 1369\nvalue = 4.5"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="Production Cost <= 0.363\nsquared_error = 0.979\nsamples = 853\nvalue = 4.596"] ;
+8 -> 9 ;
+10 [label="squared_error = 0.988\nsamples = 784\nvalue = 4.58"] ;
+9 -> 10 ;
+11 [label="squared_error = 0.842\nsamples = 69\nvalue = 4.773"] ;
+9 -> 11 ;
+12 [label="Production Cost <= 0.561\nsquared_error = 0.829\nsamples = 516\nvalue = 4.341"] ;
+8 -> 12 ;
+13 [label="squared_error = 0.853\nsamples = 440\nvalue = 4.372"] ;
+12 -> 13 ;
+14 [label="squared_error = 0.651\nsamples = 76\nvalue = 4.162"] ;
+12 -> 14 ;
+}
